@@ -1,5 +1,5 @@
-const issuesUrl =
-  'https://github.com/decadez/decadez.icu-main/issues/new?assignees=decadez&labels=demo&template=friend-link.md&title=Add+your+friend-link+to+my+site+https%3A%2F%2Fexample.com';
+import repoUrl from './repoUrl';
+const issuesUrl = `${repoUrl}/issues/new?assignees=decadez&labels=demo&template=friend-link.md&title=Add+your+friend-link+to+my+site+https%3A%2F%2Fexample.com`;
 
 export default [
   {
