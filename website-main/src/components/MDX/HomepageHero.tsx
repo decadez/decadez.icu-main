@@ -1,15 +1,10 @@
 import * as React from 'react';
-import { Logo } from 'components/Logo';
 import YouWillLearnCard from 'components/MDX/YouWillLearnCard';
-
+import SelfIntroduction from "./SelfIntroduction";
 function HomepageHero() {
   return (
     <>
-      <div className="mt-8 lg:mt-10 mb-0 sm:mt-8 sm:mb-8 lg:mb-6 flex-col sm:flex-row flex flex-grow items-start sm:items-center justify-start mx-auto max-w-4xl">
-        <div className="cursor-pointer rounded-full h-24 w-24 flex items-center justify-center text-white bg-purple-400 hover:bg-purple-700">
-          decadez
-        </div>
-      </div>
+      <SelfIntroduction />
       <section className="my-8 sm:my-10 grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-4">
         <div className="flex flex-col justify-center">
           <YouWillLearnCard title="技术沉淀" path="/blog">
