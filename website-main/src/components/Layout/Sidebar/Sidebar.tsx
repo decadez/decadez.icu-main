@@ -5,7 +5,6 @@ import { MenuContext } from 'components/useMenu';
 import { useMediaQuery } from '../useMediaQuery';
 import { SidebarRouteTree } from './SidebarRouteTree';
 import { Search } from 'components/Search';
-import { Button } from 'components/Button';
 import { MobileNav } from '../Nav/MobileNav';
 import { Feedback } from '../Feedback';
 
@@ -16,7 +15,17 @@ export function Sidebar({ isMobileOnly }: { isMobileOnly?: boolean }) {
   const isMobileSidebar = useMediaQuery(SIDEBAR_BREAKPOINT);
   let routeTree = React.useContext(SidebarContext);
   const isHidden = isMobileSidebar ? !isOpen : false;
+  const [isFeedBackShow, setIsFeedBackShow] = React.useState(false);
+  const feedBackEndRef = React.useRef<any>();
 
+  React.useEffect(() => {
+    if (!window.localStorage.getItem('handled')) {
+      setIsFeedBackShow(true);
+    }
+    return () => {
+      clearTimeout(feedBackEndRef.current);
+    };
+  }, []);
   // HACK. Fix up the data structures instead.
   if ((routeTree as any).routes.length === 1) {
     routeTree = (routeTree as any).routes[0];
@@ -43,7 +52,16 @@ export function Sidebar({ isMobileOnly }: { isMobileOnly?: boolean }) {
         )}
       </nav>
       <div className="sticky bottom-0 hidden lg:block">
-        <Feedback />
+        {isFeedBackShow && (
+          <Feedback
+            onSubmit={() => {
+              feedBackEndRef.current = setTimeout(() => {
+                setIsFeedBackShow(false);
+                window.localStorage.setItem('handled', 'true');
+              }, 2000);
+            }}
+          />
+        )}
       </div>
     </aside>
   );

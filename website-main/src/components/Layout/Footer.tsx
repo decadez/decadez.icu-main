@@ -22,12 +22,12 @@ export function Footer() {
               </div>
             </ExternalLink>
             {footerLinkMap.map((item) => (
-              <div className="flex flex-col">
+              <div className="flex flex-col" key={item.title}>
                 <FooterLink key={item.title} href={item.link} isHeader={true}>
                   {item.title}
                 </FooterLink>
-                {item.subTitles?.map((subItem) => (
-                  <FooterLink key={subItem.title} href={subItem.link}>
+                {item.subTitles?.map((subItem, idx) => (
+                  <FooterLink key={idx} href={subItem.link}>
                     {subItem.title}
                   </FooterLink>
                 ))}
