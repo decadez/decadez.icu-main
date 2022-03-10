@@ -1,6 +1,7 @@
 import sidebarInterview from './sidebarInterview';
 import sidebarHome from './sidebarHome';
 import sidebarBlog from './sidebarBlog';
+import footerLinkMap from './footerLinkMap';
 
 const siteConfig = {
   editUrl: 'https://github.com/decadez/decadez.icu-main/website-main/src/pages',
@@ -16,4 +17,10 @@ const siteConfig = {
   },
 };
 
-export { siteConfig, sidebarInterview, sidebarHome, sidebarBlog };
+export {
+  footerLinkMap,
+  siteConfig,
+  sidebarInterview,
+  sidebarHome,
+  sidebarBlog,
+};
