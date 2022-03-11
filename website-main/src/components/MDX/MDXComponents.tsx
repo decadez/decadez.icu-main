@@ -1,32 +1,29 @@
-/*
- * Copyright (c) Facebook, Inc. and its affiliates.
- */
-
 import * as React from 'react';
 import cn from 'classnames';
 
 import CodeBlock from './CodeBlock';
-import {CodeDiagram} from './CodeDiagram';
+import { CodeDiagram } from './CodeDiagram';
 import ConsoleBlock from './ConsoleBlock';
 import Convention from './Convention';
 import ExpandableCallout from './ExpandableCallout';
 import ExpandableExample from './ExpandableExample';
-import {H1, H2, H3, H4} from './Heading';
+import { H1, H2, H3, H4 } from './Heading';
 import HomepageHero from './HomepageHero';
 import InlineCode from './InlineCode';
 import Intro from './Intro';
 import Link from './Link';
-import {PackageImport} from './PackageImport';
+import { PackageImport } from './PackageImport';
 import Recap from './Recap';
 import Sandpack from './Sandpack';
 import SimpleCallout from './SimpleCallout';
 import TerminalBlock from './TerminalBlock';
 import YouWillLearnCard from './YouWillLearnCard';
-import {Challenges, Hint, Solution} from './Challenges';
-import {IconNavArrow} from '../Icon/IconNavArrow';
+import { Challenges, Hint, Solution } from './Challenges';
+import { IconNavArrow } from '../Icon/IconNavArrow';
 import ButtonLink from 'components/ButtonLink';
+import ImageX from 'components/ImageX';
 
-function CodeStep({children, step}: {children: any; step: number}) {
+function CodeStep({ children, step }: { children: any; step: number }) {
   return (
     <span
       data-step={step}
@@ -66,10 +63,10 @@ const Divider = () => (
   <hr className="my-6 block border-b border-border dark:border-border-dark" />
 );
 
-const Gotcha = ({children}: {children: React.ReactNode}) => (
+const Gotcha = ({ children }: { children: React.ReactNode }) => (
   <ExpandableCallout type="gotcha">{children}</ExpandableCallout>
 );
-const Note = ({children}: {children: React.ReactNode}) => (
+const Note = ({ children }: { children: React.ReactNode }) => (
   <ExpandableCallout type="note">{children}</ExpandableCallout>
 );
 
@@ -129,7 +126,7 @@ function LearnMore({
   );
 }
 
-function Math({children}: {children: any}) {
+function Math({ children }: { children: any }) {
   return (
     <span
       style={{
@@ -141,7 +138,7 @@ function Math({children}: {children: any}) {
   );
 }
 
-function MathI({children}: {children: any}) {
+function MathI({ children }: { children: any }) {
   return (
     <span
       style={{
@@ -164,7 +161,6 @@ function YouWillLearn({
   return <SimpleCallout title={title}>{children}</SimpleCallout>;
 }
 
-// TODO: typing.
 function Recipes(props: any) {
   return <Challenges {...props} isRecipes={true} />;
 }
@@ -210,10 +206,10 @@ function Illustration({
   return (
     <div className="my-16 mx-0 2xl:mx-auto max-w-4xl 2xl:max-w-6xl">
       <figure className="my-8 flex justify-center">
-        <img
+        <ImageX
           src={src}
           alt={alt}
-          style={{maxHeight: 300}}
+          // style={{ maxHeight: 300 }}
           className="bg-white rounded-lg"
         />
         {caption ? (
@@ -246,7 +242,12 @@ function IllustrationBlock({
   const images = imageInfos.map((info, index) => (
     <figure key={index}>
       <div className="bg-white rounded-lg p-4 flex-1 flex xl:p-6 justify-center items-center my-4">
-        <img src={info.src} alt={info.alt} height={info.height} />
+        <ImageX
+          src={info.src}
+          alt={info.alt}
+          height={info.height}
+          className="bg-white rounded-lg"
+        />
       </div>
       {info.caption ? (
         <figcaption className="text-secondary dark:text-secondary-dark text-center leading-tight mt-4">
