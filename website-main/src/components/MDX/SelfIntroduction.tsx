@@ -1,14 +1,14 @@
 import { repoUrl } from 'constants/index';
-import Logo from '../../../public/images/home/decade.gif';
-import Image from 'next/image';
+import ImageX from 'components/ImageX';
+import imageObj from '../../../public/images/home/decade.gif';
 
 function SelfIntroduction() {
   return (
     <div className="md:flex shadow-inner mt-6 bg-gray-100 dark:bg-card-dark overflow-hidden sm:rounded-lg">
-      <div className='md:flex-shrink-0 flex justify-center items-center'>
-        <Image
-          src={Logo.src}
-          layout='fixed'
+      <div className="md:flex-shrink-0 flex justify-center items-center">
+        <ImageX
+          src={imageObj.src}
+          layout="fixed"
           width={250}
           height={170}
           onClick={() => {
@@ -48,5 +48,7 @@ function SelfIntroduction() {
     </div>
   );
 }
+
+SelfIntroduction.displayName = 'SelfIntroduction';
 
 export default SelfIntroduction;

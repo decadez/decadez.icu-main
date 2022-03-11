@@ -12,7 +12,7 @@ module.exports = async function (src) {
     .shift();
   const layoutMap = {
     blog: 'Blog',
-    interview: 'interview',
+    interview: 'Interview',
   };
 
   const layout = layoutMap[pageParentDir] || 'Home';
