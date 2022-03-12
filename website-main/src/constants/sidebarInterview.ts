@@ -1,4 +1,4 @@
-export default {
+const sidebarInterview = {
   title: '面试',
   heading: true,
   path: '/interview',
@@ -27,3 +27,5 @@ export default {
     },
   ],
 };
+
+export default sidebarInterview;

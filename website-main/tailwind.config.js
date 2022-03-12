@@ -1,7 +1,3 @@
-/*
- * Copyright (c) Facebook, Inc. and its affiliates.
- */
-
 const defaultTheme = require('tailwindcss/defaultTheme');
 const colors = require('./colors');
 
@@ -16,6 +12,7 @@ module.exports = {
   theme: {
     // Override base screen sizes
     screens: {
+      'md.max': { max: '767px' },
       ...defaultTheme.screens,
       betterhover: { raw: '(hover: hover)' },
     },

@@ -1,4 +1,4 @@
-export default {
+const sidebarHome = {
   title: '首页',
   heading: true,
   path: '/',
@@ -13,15 +13,15 @@ export default {
         },
         {
           title: '其它',
-          path: '/community',
+          path: '/other',
           routes: [
             {
-              title: 'Acknowledgements',
-              path: '/community/acknowledgements',
+              title: '感想',
+              path: '/other/thinking',
             },
             {
-              title: 'Meet the Team',
-              path: '/community/meet-the-team',
+              title: '加入开源',
+              path: '/other/enter-open-source',
             },
           ],
         },
@@ -29,3 +29,5 @@ export default {
     },
   ],
 };
+
+export default sidebarHome;

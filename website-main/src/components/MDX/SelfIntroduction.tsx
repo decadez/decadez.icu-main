@@ -1,12 +1,15 @@
 import { repoUrl } from 'constants/index';
 import ImageX from 'components/ImageX';
 import imageObj from '../../../public/images/home/decade.gif';
+import { IconWeChat } from 'components/Icon/IconWeChat';
+import WeChatPopver from 'components/WeChatPopver';
 
 function SelfIntroduction() {
   return (
-    <div className="md:flex shadow-inner mt-6 bg-gray-100 dark:bg-card-dark overflow-hidden sm:rounded-lg">
-      <div className="md:flex-shrink-0 flex justify-center items-center">
+    <div className="md:flex shadow-inner mt-6 bg-gray-100 dark:bg-card-dark overflow-hidden rounded-lg">
+      <div className="md.max:p-2 md:flex-shrink-0 flex justify-center items-center">
         <ImageX
+          className="md.max:rounded-full cursor-pointer"
           src={imageObj.src}
           layout="fixed"
           width={250}
@@ -14,17 +17,21 @@ function SelfIntroduction() {
           onClick={() => {
             window.open(repoUrl, '_blank');
           }}
-          className="cursor-pointer"
         />
       </div>
-      <div className="flex-2 border-l-2 border-gray-200 dark:border-gray-600">
+      <div className="flex-2 md.max:border-t-2 md:border-l-2 border-gray-200 dark:border-gray-600">
         <dl>
           <div className="border-b-2 dark:border-gray-600 px-4 py-3 sm:grid sm:grid-cols-3 sm:px-6">
             <dt className="text-base font-bold text-gray-700 dark:text-white">
               介绍
             </dt>
             <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2 dark:text-white">
-              一名籍籍无名的前端切图仔。爱好lol，炒币，以及任何绅士喜好～
+              目前在上海从事着前端开发工作。
+              {
+                <WeChatPopver placement="bottom" trigger="hover">
+                  <span><IconWeChat className="inline-block" /></span>
+                </WeChatPopver>
+              }
             </dd>
           </div>
           <div className="border-b-2 dark:border-gray-600 px-4 py-3 sm:grid sm:grid-cols-3 sm:px-6">
@@ -32,7 +39,7 @@ function SelfIntroduction() {
               擅长
             </dt>
             <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2 dark:text-white">
-              vuejs, reactjs, nextjs, nestjs, nuxtjs等等入门操作。
+              熟悉vuejs、reactjs、nextjs、nestjs、nuxtjs等框架的安装删除。
             </dd>
           </div>
           <div className="px-4 py-3 sm:grid sm:grid-cols-3 sm:px-6">
@@ -40,7 +47,7 @@ function SelfIntroduction() {
               自我评价
             </dt>
             <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2 dark:text-white">
-              幽默，和善。始终以业务为第一，因为热爱，非内卷，自驱学习。
+              一名籍籍无名但容易相处的前端切图仔。
             </dd>
           </div>
         </dl>

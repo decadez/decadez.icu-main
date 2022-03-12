@@ -8,6 +8,6 @@ assignees: decadez
 
 Please add your friend-link to my site
 
-**Title*: 
+**NickName*: 
 **Link*: 
 *GitHub* (optional): 

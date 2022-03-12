@@ -80,7 +80,7 @@ ${css}
         displayDirection="down"
         className="inline mb-0.5 mr-1 mt-1"
       />{' '}
-      Download
+      下载demo
     </button>
   );
 };

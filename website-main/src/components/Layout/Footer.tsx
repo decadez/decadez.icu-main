@@ -4,6 +4,7 @@ import cn from 'classnames';
 import { ExternalLink } from 'components/ExternalLink';
 import { siteConfig, footerLinkMap } from 'constants/index';
 import { repoUrl } from 'constants/index';
+import WeChatPopver from 'components/WeChatPopver';
 
 export function Footer() {
   return (
@@ -26,11 +27,26 @@ export function Footer() {
                 <FooterLink key={item.title} href={item.link} isHeader={true}>
                   {item.title}
                 </FooterLink>
-                {item.subTitles?.map((subItem, idx) => (
-                  <FooterLink key={idx} href={subItem.link}>
-                    {subItem.title}
-                  </FooterLink>
-                ))}
+                {item.subTitles?.map((subItem, idx) => {
+                  if (subItem.isHover) {
+                    return (
+                      <div key={idx}>
+                        <WeChatPopver
+                          placement="left"
+                          trigger="hover">
+                          <a className="border-b inline-block border-transparent text-sm text-primary dark:text-primary-dark hover:border-gray-10">
+                            {subItem.title}
+                          </a>
+                        </WeChatPopver>
+                      </div>
+                    );
+                  }
+                  return (
+                    <FooterLink key={idx} href={subItem.link}>
+                      {subItem.title}
+                    </FooterLink>
+                  );
+                })}
               </div>
             ))}
           </div>

@@ -1,4 +1,4 @@
-export default {
+const sidebarBlog = {
   title: '博客',
   heading: true,
   path: '/blog',
@@ -9,9 +9,11 @@ export default {
       routes: [
         {
           title: '博客',
-          path: '/blog/installation',
+          path: '/blog',
         },
       ],
     },
   ],
 };
+
+export default sidebarBlog;

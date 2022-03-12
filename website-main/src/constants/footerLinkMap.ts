@@ -1,7 +1,7 @@
 import repoUrl from './repoUrl';
 const issuesUrl = `${repoUrl}/issues/new?assignees=decadez&labels=demo&template=friend-link.md&title=Add+your+friend-link+to+my+site+https%3A%2F%2Fexample.com`;
 
-export default [
+const footerLinkMap = [
   {
     title: '导航 ｜ navigation',
     link: '/',
@@ -44,16 +44,19 @@ export default [
     subTitles: [
       {
         title: '邮箱 ｜ email',
-        link: '/',
+        link: 'mailto:decadez@yeah.net',
       },
       {
         title: '扣扣 ｜ qq',
-        link: '/',
+        link: 'tencent://message/?uin=1845681270&Site=&Menu-=yes',
       },
       {
+        isHover: true,
         title: '微信 ｜ wechat',
-        link: '/',
+        link: 'pnpmforce',
       },
     ],
   },
 ];
+
+export default footerLinkMap;
