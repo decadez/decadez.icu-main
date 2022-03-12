@@ -20,6 +20,12 @@
       alt="nextjs"
     />
   </a>
+  <a href="https://nextjs.org/">
+    <img
+      src="https://img.shields.io/badge/-Nestjs-red"
+      alt="nestjs"
+    />
+  </a>
   <a href="https://v3.cn.vuejs.org/">
     <img
       src="https://img.shields.io/badge/-Vuejs-green"
