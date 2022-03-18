@@ -1,7 +1,3 @@
-/*
- * Copyright (c) Facebook, Inc. and its affiliates.
- */
-
 /* eslint-disable react-hooks/exhaustive-deps */
 import * as React from 'react';
 import {useSandpack, LoadingOverlay} from '@codesandbox/sandpack-react';

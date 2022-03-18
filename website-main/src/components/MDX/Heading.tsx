@@ -1,7 +1,3 @@
-/*
- * Copyright (c) Facebook, Inc. and its affiliates.
- */
-
 import cn from 'classnames';
 import * as React from 'react';
 import { siteConfig } from 'constants/index';

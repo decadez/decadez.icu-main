@@ -1,7 +1,3 @@
-/*
- * Copyright (c) Facebook, Inc. and its affiliates.
- */
-
 import * as React from 'react';
 import { sidebarBlog } from 'constants/index';
 import { MarkdownPage, MarkdownProps } from './MarkdownPage';
