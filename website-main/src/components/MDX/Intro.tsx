@@ -1,7 +1,3 @@
-/*
- * Copyright (c) Facebook, Inc. and its affiliates.
- */
-
 import React, {ReactNode} from 'react';
 
 export interface IntroProps {

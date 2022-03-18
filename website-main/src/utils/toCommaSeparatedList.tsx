@@ -1,7 +1,3 @@
-/*
- * Copyright (c) Facebook, Inc. and its affiliates.
- */
-
 import React from 'react';
 
 const addString = (list: React.ReactNodeArray, string: string) =>

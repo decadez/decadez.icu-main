@@ -1,7 +1,3 @@
-/*
- * Copyright (c) Facebook, Inc. and its affiliates.
- */
-
 import * as React from 'react';
 import {IconTerminal} from '../Icon/IconTerminal';
 import {IconCopy} from 'components/Icon/IconCopy';

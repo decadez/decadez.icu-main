@@ -1,23 +1,24 @@
 import { repoUrl } from 'constants/index';
 import ImageX from 'components/ImageX';
-import imageObj from '../../../public/images/home/decade.gif';
 import { IconWeChat } from 'components/Icon/IconWeChat';
 import WeChatPopver from 'components/WeChatPopver';
+import {
+  Table,
+  Thead,
+  Tbody,
+  Tfoot,
+  Tr,
+  Th,
+  Td,
+  TableCaption,
+} from '@chakra-ui/react';
+import CustomSwiper from './CustomSwiper';
 
 function SelfIntroduction() {
   return (
-    <div className="md:flex shadow-inner mt-6 bg-gray-100 dark:bg-card-dark overflow-hidden rounded-lg">
-      <div className="md.max:p-2 md:flex-shrink-0 flex justify-center items-center">
-        <ImageX
-          className="md.max:rounded-full cursor-pointer"
-          src={imageObj.src}
-          layout="fixed"
-          width={250}
-          height={170}
-          onClick={() => {
-            window.open(repoUrl, '_blank');
-          }}
-        />
+    <div className="md:flex items-center shadow-inner mt-6 bg-gray-100 dark:bg-card-dark overflow-hidden rounded-lg">
+      <div className="w-64 h-30 flex m-auto justify-center">
+        <CustomSwiper />
       </div>
       <div className="flex-2 md.max:border-t-2 md:border-l-2 border-gray-200 dark:border-gray-600">
         <dl>
@@ -29,7 +30,9 @@ function SelfIntroduction() {
               目前在上海从事着前端开发工作。
               {
                 <WeChatPopver placement="bottom" trigger="hover">
-                  <span><IconWeChat className="inline-block" /></span>
+                  <span>
+                    <IconWeChat className="inline-block" />
+                  </span>
                 </WeChatPopver>
               }
             </dd>

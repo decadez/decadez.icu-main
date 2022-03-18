@@ -1,6 +1,3 @@
-/*
- * Copyright (c) Facebook, Inc. and its affiliates.
- */
 import cn from 'classnames';
 import * as React from 'react';
 const CodeBlock = React.lazy(() => import('./CodeBlock'));
@@ -13,7 +10,7 @@ export default React.memo(function CodeBlockWrapper(props: {
   noMargin?: boolean;
   noMarkers?: boolean;
 }): any {
-  const {children, isFromPackageImport} = props;
+  const { children, isFromPackageImport } = props;
   return (
     <React.Suspense
       fallback={

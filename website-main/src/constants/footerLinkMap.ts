@@ -48,7 +48,7 @@ const footerLinkMap = [
       },
       {
         title: '扣扣 ｜ qq',
-        link: 'tencent://message/?uin=1845681270&Site=&Menu-=yes',
+        link: 'tencent://message/?uin=1845681270&Site=&Menu=yes',
       },
       {
         isHover: true,

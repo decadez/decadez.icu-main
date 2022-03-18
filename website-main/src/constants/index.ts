@@ -6,7 +6,7 @@ import repoUrl from './repoUrl';
 
 const siteConfig = {
   editUrl: `${repoUrl}/website-main/src/pages`,
-  copyright: `Copyright © ${new Date().getFullYear()} decadez Inc. All Rights Reserved.`,
+  copyright: `Copyright © ${new Date().getFullYear()} decadez. All Rights Reserved.`,
   repoUrl,
   algolia: {
     appId: 'QWGL1T9XAJ',

@@ -18,7 +18,7 @@
     "ci-check": "npm-run-all prettier:diff --parallel lint tsc lint-heading-ids",
     "tsc": "tsc --noEmit",
     "start": "next start",
-    "postinstall": "patch-package && (is-ci || (cd .. && husky install beta/.husky))",
+    "postinstall": "patch-package && (is-ci || (cd .. && husky install website-main/.husky))",
     "check-all": "npm-run-all prettier lint:fix tsc"
   },
   "dependencies": {
@@ -40,7 +40,8 @@
     "react": "experimental",
     "react-collapsed": "3.1.0",
     "react-dom": "experimental",
-    "scroll-into-view-if-needed": "^2.2.25"
+    "scroll-into-view-if-needed": "^2.2.25",
+    "swiper": "^8.0.7"
   },
   "devDependencies": {
     "@mdx-js/loader": "^1.6.16",

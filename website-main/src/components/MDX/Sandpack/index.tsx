@@ -1,7 +1,3 @@
-/*
- * Copyright (c) Facebook, Inc. and its affiliates.
- */
-
 import * as React from 'react';
 import dynamic from 'next/dynamic';
 import {createFileMap} from './utils';

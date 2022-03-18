@@ -1,7 +1,3 @@
-/*
- * Copyright (c) Facebook, Inc. and its affiliates.
- */
-
 import {useState, useCallback, useEffect} from 'react';
 
 const useMediaQuery = (width: number) => {
