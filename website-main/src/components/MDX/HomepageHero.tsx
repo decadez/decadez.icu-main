@@ -17,7 +17,7 @@ function HomepageHero() {
           </YouWillLearnCard>
         </div>
         <div className="flex flex-col justify-center">
-          <YouWillLearnCard title="Ant-s" path="/ant-s">
+          <YouWillLearnCard title="Ant-S" path="/ant-s">
             <p>基于antd的有趣的组件库</p>
             <div className="flex mt-2">
               <img
@@ -33,7 +33,7 @@ function HomepageHero() {
           </YouWillLearnCard>
         </div>
         <div className="flex flex-col justify-center">
-          <YouWillLearnCard title="Backend-for-blog" path="/interface">
+          <YouWillLearnCard title="Backend-for-blog" path="/backend">
             <p>本站用到的后端服务，手摸手从0搭建</p>
             <div className="flex mt-2">
               <img

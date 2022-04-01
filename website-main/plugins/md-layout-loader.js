@@ -13,7 +13,12 @@ module.exports = async function (src) {
   const layoutMap = {
     blog: 'Blog',
     interview: 'Interview',
-  };
+    'ant-s': 'AntS',
+    'ant-s-components': 'AntS',
+    'ant-s-others': 'AntS',
+  }; 
+
+  console.log(pageParentDir);
 
   const layout = layoutMap[pageParentDir] || 'Home';
 

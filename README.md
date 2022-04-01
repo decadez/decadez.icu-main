@@ -1,9 +1,9 @@
 <h1 align="center">
   <a href="https://decadez.icu">decadez.icu</a>
 </h1>
-<h3 align="center">初期规划是先上线一套组件库（基于antd，名字已经取好了就叫antd-s）、博客项目以及对应用到的后端服务。其中主要的技术栈包含Vuejs、Reactjs、Nextjs、 Nestjs。博客内还会记录到项目遇到的难点，以及各种干货。项目全程ts手撸，遇到的ts脑力体操也会分享给大家～</h3>
+<h3 align="center">初期规划是先上线一套组件库（基于antd，名字已经取好了就叫antd-s）、博客项目以及对应用到的后端服务。其中主要的技术栈包含Vuejs、Reactjs、Nextjs、 Nestjs。</h3>
 <p align="center">
-  <a href="/">Antd-s</a> |
+  <a href="/">Antd-S</a> |
   <a href="https://decadez.icu">Website</a> |
   <a href="/">Backend</a>
 </p>

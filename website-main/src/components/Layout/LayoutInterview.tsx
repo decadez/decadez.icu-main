@@ -8,11 +8,11 @@ interface PageFrontmatter {
 }
 
 export default function withLearn(meta: PageFrontmatter) {
-  function LayoutCategories(props: MarkdownProps<PageFrontmatter>) {
+  function LayoutInterview(props: MarkdownProps<PageFrontmatter>) {
     return <MarkdownPage {...props} meta={meta} />;
   }
-  LayoutCategories.appShell = AppShell;
-  return LayoutCategories;
+  LayoutInterview.appShell = AppShell;
+  return LayoutInterview;
 }
 
 function AppShell(props: { children: React.ReactNode }) {

@@ -1,8 +1,11 @@
-import sidebarInterview from './sidebarInterview';
-import sidebarHome from './sidebarHome';
-import sidebarBlog from './sidebarBlog';
 import footerLinkMap from './footerLinkMap';
 import repoUrl from './repoUrl';
+import { sidebarInterview, sidebarHome, sidebarBlog } from './sidebarRoot';
+import {
+  sidebarAntS,
+  sidebarAntSComponents,
+  sidebarAntSOther,
+} from './sidebarDoc';
 
 const siteConfig = {
   editUrl: `${repoUrl}/website-main/src/pages`,
@@ -25,4 +28,7 @@ export {
   sidebarInterview,
   sidebarHome,
   sidebarBlog,
+  sidebarAntS,
+  sidebarAntSComponents,
+  sidebarAntSOther,
 };

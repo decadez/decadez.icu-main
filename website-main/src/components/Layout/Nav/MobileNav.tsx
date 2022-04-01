@@ -4,19 +4,18 @@ import { RouteItem } from 'components/Layout/useRouteMeta';
 import { SidebarRouteTree } from '../Sidebar';
 import useSideRoute from './useSideRoute';
 
-export function MobileNav() {
-  const { tree: trees, routeNameMap, section, setSection } = useSideRoute();
-  let tree = trees;
+export function MobileNav({ type = 'root' }: { type?: SidebarNav }) {
+  const { tree, routeNameMap, section, setSection } = useSideRoute(type);
 
   return (
     <>
       <div className="sticky top-0 px-5 mb-2 bg-wash dark:bg-wash-dark flex justify-end border-b border-border dark:border-border-dark items-center self-center w-full z-10">
         {routeNameMap.map((item) => (
           <TabButton
-            key={item.name}
-            isActive={section === item.name}
-            onClick={() => setSection(item.name)}>
-            {item.text}
+            key={item.path}
+            isActive={section === item.path}
+            onClick={() => setSection(item.path)}>
+            {item.name}
           </TabButton>
         ))}
       </div>

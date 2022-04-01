@@ -10,11 +10,11 @@ interface PageFrontmatter {
 }
 
 export default function withAPI(p: PageFrontmatter) {
-  function LayoutTags(props: MarkdownProps<PageFrontmatter>) {
+  function LayoutBlog(props: MarkdownProps<PageFrontmatter>) {
     return <MarkdownPage {...props} meta={p} />;
   }
-  LayoutTags.appShell = AppShell;
-  return LayoutTags;
+  LayoutBlog.appShell = AppShell;
+  return LayoutBlog;
 }
 
 function AppShell(props: { children: React.ReactNode }) {

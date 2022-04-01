@@ -1,0 +1,1 @@
+declare type DocRouter = 'ant-s' | 'ant-s-components' | 'ant-s-others';

@@ -1,59 +1,33 @@
 import { repoUrl } from 'constants/index';
 import ImageX from 'components/ImageX';
 import { IconWeChat } from 'components/Icon/IconWeChat';
+import { IconGitHub } from 'components/Icon/IconGitHub';
 import WeChatPopver from 'components/WeChatPopver';
-import {
-  Table,
-  Thead,
-  Tbody,
-  Tfoot,
-  Tr,
-  Th,
-  Td,
-  TableCaption,
-} from '@chakra-ui/react';
-import CustomSwiper from './CustomSwiper';
 
 function SelfIntroduction() {
   return (
-    <div className="md:flex items-center shadow-inner mt-6 bg-gray-100 dark:bg-card-dark overflow-hidden rounded-lg">
-      <div className="w-64 h-30 flex m-auto justify-center">
-        <CustomSwiper />
+    <div className="mt-6 shadow-inner bg-gray-100 dark:bg-card-dark py-8 px-8 max-w-sm mx-auto rounded-xl space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
+      <div className="flex justify-center">
+        <ImageX className='rounded-full' width={100} height={100} src="/images/home/decade.png" />
       </div>
-      <div className="flex-2 md.max:border-t-2 md:border-l-2 border-gray-200 dark:border-gray-600">
-        <dl>
-          <div className="border-b-2 dark:border-gray-600 px-4 py-3 sm:grid sm:grid-cols-3 sm:px-6">
-            <dt className="text-base font-bold text-gray-700 dark:text-white">
-              介绍
-            </dt>
-            <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2 dark:text-white">
-              目前在上海从事着前端开发工作。
-              {
-                <WeChatPopver placement="bottom" trigger="hover">
-                  <span>
-                    <IconWeChat className="inline-block" />
-                  </span>
-                </WeChatPopver>
-              }
-            </dd>
-          </div>
-          <div className="border-b-2 dark:border-gray-600 px-4 py-3 sm:grid sm:grid-cols-3 sm:px-6">
-            <dt className="text-base font-bold text-gray-700 dark:text-white">
-              擅长
-            </dt>
-            <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2 dark:text-white">
-              熟悉vuejs、reactjs、nextjs、nestjs、nuxtjs等框架的安装删除。
-            </dd>
-          </div>
-          <div className="px-4 py-3 sm:grid sm:grid-cols-3 sm:px-6">
-            <dt className="text-base font-bold text-gray-700 dark:text-white">
-              自我评价
-            </dt>
-            <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2 dark:text-white">
-              一名籍籍无名但容易相处的前端切图仔。
-            </dd>
-          </div>
-        </dl>
+
+      <div className="text-center space-y-2 sm:text-left">
+        <div className="space-y-0.5">
+          <p className="text-black text-2xl font-semibold dark:text-white">decadez</p>
+          <p className="text-gray-500 font-medium dark:text-gray-300">Frontend Engineer</p>
+        </div>
+        <div className="flex items-center md.max:justify-center">
+          {
+            <WeChatPopver placement="bottom" trigger="hover">
+              <div>
+                <IconWeChat />
+              </div>
+            </WeChatPopver>
+          }
+          <a href={repoUrl} target="_blank">
+            <IconGitHub className="ml-2" />
+          </a>
+        </div>
       </div>
     </div>
   );

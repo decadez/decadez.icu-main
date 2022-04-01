@@ -22,6 +22,7 @@
     "check-all": "npm-run-all prettier lint:fix tsc"
   },
   "dependencies": {
+    "@chakra-ui/icons": "^1.1.7",
     "@chakra-ui/react": "^1.8.6",
     "@codesandbox/sandpack-react": "0.13.16-experimental.0",
     "@docsearch/css": "3.0.0-alpha.41",
