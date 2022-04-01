@@ -10,7 +10,10 @@ import { Toc } from './Toc';
 export interface MarkdownProps<Frontmatter> {
   meta: Frontmatter & { description?: string };
   children?: React.ReactNode;
+  type: SidebarNav;
 }
+
+type SidebarNav = 'root' | 'docs';
 
 function MaxWidth({ children }: { children: any }) {
   return <div className="max-w-4xl ml-0 2xl:mx-auto">{children}</div>;
@@ -21,12 +24,13 @@ export function MarkdownPage<
     title: string;
     status?: string;
   }
->({ children, meta }: MarkdownProps<T>) {
+>({ children, meta, type = 'root' }: MarkdownProps<T>) {
   const { route, nextRoute, prevRoute } = useRouteMeta();
   const title = meta.title || route?.title || '';
   const description = meta.description || route?.description || '';
 
   let anchors: Array<{
+    title?: string;
     url: string;
     text: React.ReactNode;
     depth: number;
@@ -66,14 +70,12 @@ export function MarkdownPage<
   if (anchors.length > 0) {
     anchors.unshift({
       depth: 1,
-      text: 'Overview',
+      text: '概述',
       url: '#',
+      title,
     });
   }
 
-  if (!route) {
-    console.error('This page was not added to one of the sidebar JSON files.');
-  }
   const isHomePage = route?.path === '/';
 
   // Auto-wrap everything except a few types into
@@ -139,7 +141,9 @@ export function MarkdownPage<
         </div>
       </div>
       <div className="w-full lg:max-w-xs hidden 2xl:block">
-        {!isHomePage && anchors.length > 0 && <Toc headings={anchors} />}
+        {!isHomePage && anchors.length > 0 && (
+          <Toc type={type} headings={anchors} />
+        )}
       </div>
     </article>
   );

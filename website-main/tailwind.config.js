@@ -10,6 +10,10 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
+    zIndex: {
+      ...defaultTheme.zIndex,
+      9999: 9999,
+    },
     // Override base screen sizes
     screens: {
       'md.max': { max: '767px' },

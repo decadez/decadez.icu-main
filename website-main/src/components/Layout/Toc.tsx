@@ -1,28 +1,38 @@
 import cx from 'classnames';
 import * as React from 'react';
-import {useTocHighlight} from './useTocHighlight';
+import { useTocHighlight } from './useTocHighlight';
+
+type SidebarNav = 'root' | 'docs';
 
 export function Toc({
   headings,
+  type = 'root',
 }: {
-  headings: Array<{url: string; text: React.ReactNode; depth: number}>;
+  headings: Array<{
+    title?: string;
+    url: string;
+    text: React.ReactNode;
+    depth: number;
+  }>;
+  type?: SidebarNav;
 }) {
-  const {currentIndex} = useTocHighlight();
+  const { currentIndex } = useTocHighlight();
   // TODO: We currently have a mismatch between the headings in the document
   // and the headings we find in MarkdownPage (i.e. we don't find Recap or Challenges).
   // Select the max TOC item we have here for now, but remove this after the fix.
   const selectedIndex = Math.min(currentIndex, headings.length - 1);
+
   return (
     <nav
       role="navigation"
-      className="pt-6 fixed top-0 right-0"
+      className={cx('fixed top-0 right-0', type === 'docs' ? 'pt-16' : 'pt-6')}
       style={{
         // This keeps the layout fixed width instead of adjusting for content.
         width: 'inherit',
         maxWidth: 'inherit',
       }}>
       <h2 className="mb-3 lg:mb-3 uppercase tracking-wide font-bold text-sm text-secondary dark:text-secondary-dark px-4 w-full">
-        On this page
+        {headings[0].title}
       </h2>
       <div className="toc h-full overflow-y-auto pl-4">
         <ul className="space-y-2 pb-16">

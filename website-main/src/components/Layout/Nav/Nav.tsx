@@ -86,7 +86,7 @@ export default function Nav() {
   const [showFeedback, setShowFeedback] = React.useState(false);
   const feedbackAutohideRef = React.useRef<any>(null);
   const feedbackPopupRef = React.useRef<null | HTMLDivElement>(null);
-  const { routeNameMap, section, setSection } = useSideRoute();
+  const { routeNameMap, section } = useSideRoute();
 
   React.useEffect(() => {
     if (!showFeedback) {
@@ -161,10 +161,10 @@ export default function Nav() {
       <div className="px-0 pt-2 w-full 2xl:max-w-xs hidden lg:flex items-center self-center border-b-0 lg:border-b border-border dark:border-border-dark">
         {routeNameMap.map((item) => (
           <NavLink
-            key={item.name}
-            href={item.name === 'home' ? '/' : `/${item.name}`}
-            isActive={section === item.name}>
-            {item.text}
+            key={item.path}
+            href={item.path === 'home' ? '/' : `/${item.path}`}
+            isActive={section === item.path}>
+            {item.name}
           </NavLink>
         ))}
       </div>

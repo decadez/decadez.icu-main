@@ -7,9 +7,10 @@ interface NavLinkProps {
   href: string;
   children: React.ReactNode;
   isActive: boolean;
+  onClick?: () => void;
 }
 
-export default function NavLink({href, children, isActive}: NavLinkProps) {
+export default function NavLink({onClick, href, children, isActive}: NavLinkProps) {
   const classes = cn(
     {
       'text-link border-link dark:text-link-dark dark:border-link-dark font-bold':
@@ -29,7 +30,7 @@ export default function NavLink({href, children, isActive}: NavLinkProps) {
 
   return (
     <NextLink href={href}>
-      <a className={classes}>{children}</a>
+      <a className={classes} onClick={onClick}>{children}</a>
     </NextLink>
   );
 }
