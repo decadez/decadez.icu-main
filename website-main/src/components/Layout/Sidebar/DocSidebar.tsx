@@ -6,7 +6,6 @@ import { useMediaQuery } from '../useMediaQuery';
 import { SidebarRouteTree } from './SidebarRouteTree';
 import { MobileNav } from '../Nav/MobileNav';
 import { Feedback } from '../Feedback';
-import { Search } from 'components/Search';
 
 const SIDEBAR_BREAKPOINT = 1023;
 

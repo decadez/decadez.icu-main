@@ -106,16 +106,16 @@ function LearnMore({
       <section className="p-8 mt-16 mb-16 flex flex-row shadow-inner justify-between items-center bg-card dark:bg-card-dark rounded-lg">
         <div className="flex-col">
           <h2 className="text-primary dark:text-primary-dark font-bold text-2xl leading-tight">
-            Ready to learn this topic?
+            前往该文章！
           </h2>
           {children}
           {path ? (
             <ButtonLink
               className="mt-1"
-              label="Read More"
+              label="阅读更多"
               href={path}
               type="primary">
-              Read More
+              阅读更多
               <IconNavArrow displayDirection="right" className="inline ml-1" />
             </ButtonLink>
           ) : null}
@@ -157,7 +157,7 @@ function YouWillLearn({
   children: any;
   isChapter?: boolean;
 }) {
-  let title = isChapter ? 'In this chapter' : 'You will learn';
+  let title = isChapter ? '在本章' : '你将学到';
   return <SimpleCallout title={title}>{children}</SimpleCallout>;
 }
 
