@@ -138,8 +138,11 @@ export default function DocNav() {
             <strong className="ml-2">Ant-S</strong>
           </a>
         </NextLink>
-        <Link href="/" isExternal>
+        <Link className="md.max:hidden flex items-center" href="/" isExternal>
           decadezのblog <ExternalLinkIcon mx="2px" />
+        </Link>
+        <Link className="md:hidden ml-2 flex items-center" href="/" isExternal>
+          <ExternalLinkIcon mx="2px" />
         </Link>
       </div>
       <div className="lg:flex items-center hidden max-w-2xl">

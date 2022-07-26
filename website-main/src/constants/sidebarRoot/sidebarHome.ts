@@ -23,6 +23,10 @@ const sidebarHome = {
               title: '加入开源',
               path: '/other/enter-open-source',
             },
+            {
+              title: 'MDX 组件',
+              path: '/other/mdx-components',
+            },
           ],
         },
       ],
